@@ -61,7 +61,12 @@ export default function Home() {
 
   return (
     <div>
-      <div className="hero" style={{ backgroundPositionY: `${scrollY * 0.25}px` }}>
+      <div className="hero" style={{ 
+        backgroundPositionY: `${scrollY * 0.25}px`,
+        backgroundImage: `linear-gradient(rgba(10, 10, 12, 0.8), rgba(10, 10, 12, 0.9)), url('https://source.unsplash.com/random/1920x1080?assassins-creed')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}>
         <div className="hero-eagle-mark" style={{ transform: `translateY(${scrollY * 0.15}px)` }}>⟁</div>
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div className="eyebrow hero-eyebrow" style={{ marginBottom: 18 }}>Nothing is true. Everything is permitted.</div>

@@ -55,13 +55,15 @@ export default function GameDetails() {
       />
 
       <div
-        className="panel"
-        style={{
-          padding: '48px 32px',
-          background: `linear-gradient(155deg, ${game.accent}33 0%, #0f0f12 70%)`,
-          marginBottom: 32,
-          position: 'relative',
-        }}
+      className="panel"
+      style={{
+        padding: '48px 32px',
+        backgroundImage: `linear-gradient(155deg, ${game.accent}CC 0%, #0f0f12 70%), url('https://source.unsplash.com/random/1200x600?sig=${game.title}')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        marginBottom: 32,
+        position: 'relative',
+      }}
       >
         <Button icon={<ArrowLeftOutlined />} onClick={() => navigate(-1)} style={{ marginBottom: 20 }}>
           Back
@@ -113,7 +115,7 @@ export default function GameDetails() {
                 <Col xs={12} sm={6} key={n}>
                   <div style={{
                     aspectRatio: '16/9', borderRadius: 4, border: '1px solid var(--ac-line)',
-                    background: `linear-gradient(${45 * n}deg, ${game.accent}44, #0c0c0e)`,
+                    background: `url('https://source.unsplash.com/random/600x400?sig=${game.title}${n}') center/cover`,
                   }} />
                 </Col>
               ))}

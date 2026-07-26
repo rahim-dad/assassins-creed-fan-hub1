@@ -15,7 +15,10 @@ export default function HistorySettings() {
           <Col xs={24} sm={12} lg={8} key={s.id}>
             <div className="panel" style={{ overflow: 'hidden', height: '100%' }}>
               <div style={{
-                height: 140, background: `linear-gradient(155deg, ${s.accent}66, #0c0c0e)`,
+                height: 140, 
+                backgroundImage: `linear-gradient(155deg, ${s.accent}88, #0c0c0e), url('https://source.unsplash.com/random/500x300?historical-setting-${s.name.replace(/\s+/g, '-')}')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 fontFamily: 'var(--font-display)', fontSize: 18, textAlign: 'center', padding: 16,
               }}>
