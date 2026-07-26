@@ -58,7 +58,7 @@ export default function GameDetails() {
       className="panel"
       style={{
         padding: '48px 32px',
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.alphacoders.com/604/604561.jpg')`,
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -75,7 +75,7 @@ export default function GameDetails() {
           <Col xs={24} md={8}>
             <div style={{
               aspectRatio: '3/4', borderRadius: 6, border: `1px solid ${game.accent}`,
-              backgroundImage: `url('https://images.alphacoders.com/978/978153.jpg')`,
+              backgroundImage: `url('https://images.unsplash.com/photo-1593341643927-b022266b1a20?auto=format&fit=crop&w=300&q=80')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
@@ -122,7 +122,7 @@ export default function GameDetails() {
                 <Col xs={12} sm={6} key={n}>
                   <div style={{
                     aspectRatio: '16/9', borderRadius: 4, border: '1px solid var(--ac-line)',
-                    background: `url('https://images.alphacoders.com/105/1051512.jpg') center/cover`,
+                    background: `url('https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80') center/cover`,
                   }} />
                 </Col>
               ))}
