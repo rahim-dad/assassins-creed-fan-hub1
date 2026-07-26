@@ -54,57 +54,45 @@ export default function GameDetails() {
         style={{ marginBottom: 20 }}
       />
 
-      <div
-      className="panel"
-      style={{
-        padding: '48px 32px',
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundBlendMode: 'overlay',
-        marginBottom: 32,
-        position: 'relative',
-        minHeight: '200px'
-      }}
-      >
-        <Button icon={<ArrowLeftOutlined />} onClick={() => navigate(-1)} style={{ marginBottom: 20 }}>
-          Back
-        </Button>
-        <Row gutter={[32, 24]} align="middle">
-          <Col xs={24} md={8}>
-            <div style={{
-              aspectRatio: '3/4', borderRadius: 6, border: `1px solid ${game.accent}`,
-              backgroundImage: `url('https://images.unsplash.com/photo-1593341643927-b022266b1a20?auto=format&fit=crop&w=300&q=80')`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-              minHeight: '200px',
-              display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: 20,
-              fontFamily: 'var(--font-display)', fontSize: 22, color: '#fff',
-            }}>
-              {game.title}
-            </div>
-          </Col>
-          <Col xs={24} md={16}>
-            <span className="tag-era">{game.era}</span>
-            <Typography.Title level={1} className="display-heading" style={{ margin: '10px 0' }}>{game.title}</Typography.Title>
-            <p style={{ color: 'var(--ac-muted)', fontSize: 16, maxWidth: 620 }}>{game.description}</p>
-            <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', margin: '16px 0' }}>
-              <Button className="btn-primary" icon={isFavorite ? <HeartFilled /> : <HeartOutlined />} onMouseDown={spawnRipple} onClick={() => dispatch(toggleFavorite(game.id))}>
-                {isFavorite ? 'Saved to Favorites' : 'Add to Favorites'}
-              </Button>
-              <Button className="btn-ghost" onMouseDown={spawnRipple} onClick={() => navigate('/compare')}>Compare This Game</Button>
-            </div>
-            <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap', marginTop: 10 }}>
-              <Stat label="Rating" value={<span><StarFilled style={{ color: 'var(--ac-gold)' }} /> {game.rating}</span>} />
-              <Stat label="Release" value={game.year} />
-              <Stat label="Genre" value={game.genre} />
-              <Stat label="Main Character" value={game.mainCharacter} />
-            </div>
-          </Col>
-        </Row>
+      {/* Banner Section */}
+      <div className="panel" style={{ padding: 0, marginBottom: 32, position: 'relative', overflow: 'hidden' }}>
+        <img 
+          src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80"
+          style={{ width: '100%', height: '300px', objectFit: 'cover' }}
+        />
+        <div style={{ position: 'absolute', top: 48, left: 32 }}>
+          <Button icon={<ArrowLeftOutlined />} onClick={() => navigate(-1)}>Back</Button>
+        </div>
       </div>
+
+      <Row gutter={[32, 24]} align="middle">
+        <Col xs={24} md={8}>
+          {/* Cover Section */}
+          <div style={{ borderRadius: 6, border: `1px solid ${game.accent}`, overflow: 'hidden' }}>
+            <img 
+              src="https://images.unsplash.com/photo-1593341643927-b022266b1a20?auto=format&fit=crop&w=300&q=80"
+              style={{ width: '100%', height: '400px', objectFit: 'cover' }}
+            />
+          </div>
+        </Col>
+        <Col xs={24} md={16}>
+          <span className="tag-era">{game.era}</span>
+          <Typography.Title level={1} className="display-heading" style={{ margin: '10px 0' }}>{game.title}</Typography.Title>
+          <p style={{ color: 'var(--ac-muted)', fontSize: 16, maxWidth: 620 }}>{game.description}</p>
+          <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', margin: '16px 0' }}>
+            <Button className="btn-primary" icon={isFavorite ? <HeartFilled /> : <HeartOutlined />} onMouseDown={spawnRipple} onClick={() => dispatch(toggleFavorite(game.id))}>
+              {isFavorite ? 'Saved to Favorites' : 'Add to Favorites'}
+            </Button>
+            <Button className="btn-ghost" onMouseDown={spawnRipple} onClick={() => navigate('/compare')}>Compare This Game</Button>
+          </div>
+          <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap', marginTop: 10 }}>
+            <Stat label="Rating" value={<span><StarFilled style={{ color: 'var(--ac-gold)' }} /> {game.rating}</span>} />
+            <Stat label="Release" value={game.year} />
+            <Stat label="Genre" value={game.genre} />
+            <Stat label="Main Character" value={game.mainCharacter} />
+          </div>
+        </Col>
+      </Row>
 
       <Row gutter={[32, 32]}>
         <Col xs={24} md={16}>
