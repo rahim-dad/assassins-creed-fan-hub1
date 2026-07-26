@@ -18,6 +18,7 @@ export default function CharacterCard({ character }) {
     >
       <Avatar
         size={84}
+        src={`https://picsum.photos/seed/${character.name}-warrior/100/100`}
         icon={<UserOutlined />}
         style={{ background: `linear-gradient(155deg, ${character.accent}88, #101013)`, border: `1px solid ${character.accent}` }}
       />

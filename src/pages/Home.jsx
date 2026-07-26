@@ -63,7 +63,7 @@ export default function Home() {
     <div>
       <div className="hero" style={{ 
         backgroundPositionY: `${scrollY * 0.25}px`,
-        backgroundImage: `linear-gradient(rgba(10, 10, 12, 0.8), rgba(10, 10, 12, 0.9)), url('https://source.unsplash.com/random/1920x1080?assassins-creed')`,
+        backgroundImage: `linear-gradient(rgba(10, 10, 12, 0.8), rgba(10, 10, 12, 0.9)), url('https://picsum.photos/seed/assassins-creed/1920/1080')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>

@@ -58,11 +58,14 @@ export default function GameDetails() {
       className="panel"
       style={{
         padding: '48px 32px',
-        backgroundImage: `linear-gradient(155deg, ${game.accent}CC 0%, #0f0f12 70%), url('https://source.unsplash.com/random/1200x600?sig=${game.title}')`,
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://placehold.co/1200x600/000000/FFFFFF/png?text=Game+Banner')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundBlendMode: 'overlay',
         marginBottom: 32,
         position: 'relative',
+        minHeight: '200px'
       }}
       >
         <Button icon={<ArrowLeftOutlined />} onClick={() => navigate(-1)} style={{ marginBottom: 20 }}>
@@ -72,7 +75,11 @@ export default function GameDetails() {
           <Col xs={24} md={8}>
             <div style={{
               aspectRatio: '3/4', borderRadius: 6, border: `1px solid ${game.accent}`,
-              background: `linear-gradient(160deg, ${game.accent}77, #0c0c0e)`,
+              backgroundImage: `url('https://placehold.co/300x400/000000/FFFFFF/png?text=Cover')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              minHeight: '200px',
               display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: 20,
               fontFamily: 'var(--font-display)', fontSize: 22, color: '#fff',
             }}>
@@ -115,7 +122,7 @@ export default function GameDetails() {
                 <Col xs={12} sm={6} key={n}>
                   <div style={{
                     aspectRatio: '16/9', borderRadius: 4, border: '1px solid var(--ac-line)',
-                    background: `url('https://source.unsplash.com/random/600x400?sig=${game.title}${n}') center/cover`,
+                    background: `url('https://placehold.co/600x400/000000/FFFFFF/png?text=Screenshot') center/cover`,
                   }} />
                 </Col>
               ))}

@@ -70,7 +70,7 @@ export default function CharacterDetails() {
             <Row gutter={[12, 12]}>
               {[1, 2, 3].map((n) => (
                 <Col xs={8} key={n}>
-                  <div style={{ aspectRatio: '3/4', borderRadius: 4, border: '1px solid var(--ac-line)', background: `linear-gradient(${60 * n}deg, ${character.accent}44, #0c0c0e)` }} />
+                  <div style={{ aspectRatio: '3/4', borderRadius: 4, border: '1px solid var(--ac-line)', background: `url('https://picsum.photos/seed/${character.name}${n}/300/400') center/cover` }} />
                 </Col>
               ))}
             </Row>

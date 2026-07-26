@@ -16,7 +16,7 @@ export default function HistorySettings() {
             <div className="panel" style={{ overflow: 'hidden', height: '100%' }}>
               <div style={{
                 height: 140, 
-                backgroundImage: `linear-gradient(155deg, ${s.accent}88, #0c0c0e), url('https://source.unsplash.com/random/500x300?historical-setting-${s.name.replace(/\s+/g, '-')}')`,
+                backgroundImage: `linear-gradient(155deg, ${s.accent}88, #0c0c0e), url('https://picsum.photos/seed/${s.name.replace(/\s+/g, '-')}/500/300')`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
