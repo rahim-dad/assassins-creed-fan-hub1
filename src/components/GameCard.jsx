@@ -17,14 +17,11 @@ export default function GameCard({ game }) {
       <div
         className="game-card-cover"
         style={{ 
-          background: `linear-gradient(155deg, ${game.accent}55 0%, #0c0c0e 75%)`
+          background: `linear-gradient(155deg, ${game.accent}55 0%, #0c0c0e 75%), url('https://picsum.photos/seed/${game.id}/300/400')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
         }}
       >
-        <img 
-          src={`https://placehold.co/300x400/000000/FFFFFF/png?text=${game.title.replace(/\s+/g, '+')}`}
-          alt={game.title}
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-        />
         <div style={{
           position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
           fontFamily: 'var(--font-display)', fontSize: 15, color: 'rgba(255,255,255,0.85)',

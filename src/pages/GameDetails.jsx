@@ -57,7 +57,7 @@ export default function GameDetails() {
       {/* Banner Section */}
       <div className="panel" style={{ padding: 0, marginBottom: 32, position: 'relative', overflow: 'hidden' }}>
         <img 
-          src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80"
+          src={`https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80`}
           style={{ width: '100%', height: '300px', objectFit: 'cover' }}
         />
         <div style={{ position: 'absolute', top: 48, left: 32 }}>
@@ -70,7 +70,7 @@ export default function GameDetails() {
           {/* Cover Section */}
           <div style={{ borderRadius: 6, border: `1px solid ${game.accent}`, overflow: 'hidden' }}>
             <img 
-              src="https://images.unsplash.com/photo-1593341643927-b022266b1a20?auto=format&fit=crop&w=300&q=80"
+              src={`https://images.unsplash.com/photo-1593341643927-b022266b1a20?auto=format&fit=crop&w=300&q=80`}
               style={{ width: '100%', height: '400px', objectFit: 'cover' }}
             />
           </div>
@@ -108,10 +108,10 @@ export default function GameDetails() {
             <Row gutter={[12, 12]}>
               {[1, 2, 3, 4].map((n) => (
                 <Col xs={12} sm={6} key={n}>
-                  <div style={{
-                    aspectRatio: '16/9', borderRadius: 4, border: '1px solid var(--ac-line)',
-                    background: `url('https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80') center/cover`,
-                  }} />
+                  <img 
+                    src={`https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80`}
+                    style={{ width: '100%', aspectRatio: '16/9', borderRadius: 4, objectFit: 'cover' }}
+                  />
                 </Col>
               ))}
             </Row>
