@@ -66,15 +66,37 @@ export default function GameDetails() {
       </div>
 
       <Row gutter={[32, 24]} align="middle">
+
+
         <Col xs={24} md={8}>
-          {/* Cover Section */}
-          <div style={{ borderRadius: 6, border: `1px solid ${game.accent}`, overflow: 'hidden' }}>
-            <img 
-              src={`https://images.unsplash.com/photo-1593341643927-b022266b1a20?auto=format&fit=crop&w=300&q=80`}
-              style={{ width: '100%', height: '400px', objectFit: 'cover' }}
-            />
-          </div>
-        </Col>
+  {/* Cover Section */}
+  <div
+    style={{
+      borderRadius: 6,
+      border: `1px solid ${game.accent}`,
+      overflow: "hidden",
+      background: "#111",
+    }}
+  >
+    <img
+      src={`https://picsum.photos/500/700?random=${game.id}`}
+      alt={game.title}
+      style={{
+        width: "100%",
+        height: "400px",
+        objectFit: "cover",
+        display: "block",
+      }}
+      onError={(e) => {
+        e.target.src = "https://picsum.photos/500/700";
+      }}
+    />
+  </div>
+</Col>
+
+
+
+
         <Col xs={24} md={16}>
           <span className="tag-era">{game.era}</span>
           <Typography.Title level={1} className="display-heading" style={{ margin: '10px 0' }}>{game.title}</Typography.Title>
