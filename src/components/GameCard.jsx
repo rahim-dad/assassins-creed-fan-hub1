@@ -17,7 +17,7 @@ export default function GameCard({ game }) {
       <div
         className="game-card-cover"
         style={{ 
-          background: `linear-gradient(155deg, ${game.accent}55 0%, #0c0c0e 75%), url('https://picsum.photos/300/400?random=${game.id}')`,
+          background: `linear-gradient(155deg, ${game.accent}55 0%, #0c0c0e 75%), url('https://placehold.co/300x400/000000/FFFFFF/png?text=${game.title.replace(/\s+/g, '+')}')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
