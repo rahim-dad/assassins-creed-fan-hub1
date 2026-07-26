@@ -58,7 +58,7 @@ export default function GameDetails() {
       className="panel"
       style={{
         padding: '48px 32px',
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://placehold.co/1200x600/000000/FFFFFF/png?text=Game+Banner')`,
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.alphacoders.com/604/604561.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -75,7 +75,7 @@ export default function GameDetails() {
           <Col xs={24} md={8}>
             <div style={{
               aspectRatio: '3/4', borderRadius: 6, border: `1px solid ${game.accent}`,
-              backgroundImage: `url('https://placehold.co/300x400/000000/FFFFFF/png?text=Cover')`,
+              backgroundImage: `url('https://images.alphacoders.com/978/978153.jpg')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
@@ -122,7 +122,7 @@ export default function GameDetails() {
                 <Col xs={12} sm={6} key={n}>
                   <div style={{
                     aspectRatio: '16/9', borderRadius: 4, border: '1px solid var(--ac-line)',
-                    background: `url('https://placehold.co/600x400/000000/FFFFFF/png?text=Screenshot') center/cover`,
+                    background: `url('https://images.alphacoders.com/105/1051512.jpg') center/cover`,
                   }} />
                 </Col>
               ))}
